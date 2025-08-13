@@ -1,3 +1,5 @@
+# Asking the user for the Classless Inter-Domain Routing value
+# It should be pure positive integer
 cidr_user = int(input('Write your prefered CIDR value: '))
 mask = ['','','','']
 for digit in range(cidr_user+1):
