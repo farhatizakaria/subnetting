@@ -1,8 +1,9 @@
 # Asking the user for the Classless Inter-Domain Routing value
 # It should be pure positive integer
 cidr_user = int(input('Write your prefered CIDR value: '))
+# Subnet mask as 1 or 0 digits
 mask = ['','','','']
-for digit in range(cidr_user+1):
+for digit in range(cidr_user):
     if len(mask[0]) < 8:
         mask[0] += '1'
     elif len(mask[1]) < 8:
