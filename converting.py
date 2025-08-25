@@ -2,7 +2,7 @@
 def toDecimal(binary:str) -> int:
     if len(binary) == 8:
         total = 0
-        k = 7
+        k = 7 # The loop will begin from 2⁷, so k=7 then decrement it through for loop
         for i in range(0,8):
             prod = int(binary[i]) * 2 ** k
             total += prod
