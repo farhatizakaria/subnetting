@@ -1,3 +1,5 @@
+from converting import *
+
 # Asking the user for the Classless Inter-Domain Routing value
 # It should be pure positive integer
 cidr_user = int(input('Write your prefered CIDR value: '))
@@ -20,4 +22,11 @@ for block in range(4):
     while len(mask[block]) < 8:
         mask[block] += '0'
 
-print(mask)
+subnet_mask = ''
+for i in range(4):
+    if i <=2:
+        subnet_mask += str(toDecimal(mask[i])) + '.'
+    else:
+        subnet_mask += str(toDecimal(mask[i]))
+
+print(subnet_mask)
