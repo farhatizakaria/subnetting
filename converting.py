@@ -30,7 +30,8 @@ def toBinary(decimal:int) -> str:
     result = missing_zeros * '0' + result
     return result
 
-a = (toDecimal('00000100')) # Done
-b = (toBinary(18)) # Done
-print(a)
-print(b)
+# Testing
+#a = (toDecimal('00000100')) # Done
+#b = (toBinary(18)) # Done
+#print(a)
+#print(b)
