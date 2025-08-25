@@ -1,5 +1,5 @@
 # This script made only for converting binary-decimal purposes
-def toDecimal(binary):
+def toDecimal(binary:str) -> int:
     if len(binary) == 8:
         total = 0
         k = 7
@@ -7,11 +7,11 @@ def toDecimal(binary):
             prod = int(binary[i]) * 2 ** k
             total += prod
             k = k - 1
-        print(total)
+        return total
     else:
-        print('Make sure the given binary should be in 8-digits form')
+        print('Make sure the given binary should be full byte form (8 bits)')
 
-def toBinary(decimal):
+def toBinary(decimal:int) -> str:
     decimal_result = ''
     while True:
         q = decimal // 2
@@ -28,7 +28,9 @@ def toBinary(decimal):
     # Check missing zeros at the left, because we need results to be as full Byte form (8 bits)
     missing_zeros = 8 - len(result)
     result = missing_zeros * '0' + result
-    print(result)
+    return result
 
-#toDecimal('01100100') # Done
-toBinary(700) # Done
+a = (toDecimal('00000100')) # Done
+b = (toBinary(18)) # Done
+print(a)
+print(b)
