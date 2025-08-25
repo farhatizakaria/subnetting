@@ -24,7 +24,9 @@ def toBinary(decimal):
             break
     # We need to inverse the result's order
     result = decimal_result[::-1]
+    missing_zeros = 8 - len(result)
+    result = missing_zeros * '0' + result
     print(result)
 
-toDecimal('01100100') # Done
-toBinary(100) # Done
+#toDecimal('01100100') # Done
+toBinary(700) # Done
