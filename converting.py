@@ -25,6 +25,7 @@ def toBinary(decimal):
             break
     # We need to inverse the result's order
     result = decimal_result[::-1]
+    # Check missing zeros at the left, because we need results to be as full Byte form (8 bits)
     missing_zeros = 8 - len(result)
     result = missing_zeros * '0' + result
     print(result)
