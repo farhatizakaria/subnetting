@@ -16,6 +16,7 @@ for digit in range(cidr_user):
         mask[3] += '1'
 # Filling mask with zeros (host ID)
 for block in range(4):
+    # While the block isn't full 8 bits, full the rest with zeros
     while len(mask[block]) < 8:
         mask[block] += '0'
 
