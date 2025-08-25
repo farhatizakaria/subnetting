@@ -3,6 +3,8 @@
 cidr_user = int(input('Write your prefered CIDR value: '))
 # Subnet mask as 1 or 0 digits
 mask = ['','','','']
+
+# Filling mask with ones (network ID)
 for digit in range(cidr_user):
     if len(mask[0]) < 8:
         mask[0] += '1'
@@ -12,4 +14,11 @@ for digit in range(cidr_user):
         mask[2] += '1'
     elif len(mask[3]) < 8:
         mask[3] += '1'
+# Filling mask with zeros (host ID)
+for block in range(4):
+    if len(mask[block]) < 8:
+        mask[block] += '0'
+
+
+
 print(mask)
