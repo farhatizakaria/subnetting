@@ -18,8 +18,9 @@ def toBinary(decimal):
         r = decimal % 2
         # We care with the rest of given decimal with 2
         decimal_result += str(r)
-        # Open the loop to divise the new given result
+        # Exchange to divise the new given result and keep the loop going
         decimal = q
+        # If the result is 0 break the loop
         if q == 0:
             break
     # We need to inverse the result's order
