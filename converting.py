@@ -1,5 +1,5 @@
 # This script made only for converting binary-decimal purposes
-def toDecimal(binary:str) -> int:
+def toDecimal(binary:str):
     if len(binary) == 8:
         total = 0
         k = 7 # The loop will begin from 2⁷, so k=7 then decrement it through for loop
