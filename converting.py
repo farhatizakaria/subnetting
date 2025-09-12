@@ -29,9 +29,3 @@ def toBinary(decimal:int) -> str:
     missing_zeros = 8 - len(result)
     result = missing_zeros * '0' + result
     return result
-
-# Testing
-#a = (toDecimal('00000100')) # Done
-#b = (toBinary(18)) # Done
-#print(a)
-#print(b)
