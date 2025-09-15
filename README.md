@@ -21,6 +21,7 @@
 	<img src="https://img.shields.io/github/last-commit/farhatizakaria/subnetting?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/farhatizakaria/subnetting?style=default&color=0080ff" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/farhatizakaria/subnetting?style=default&color=0080ff" alt="repo-language-count">
+	<img src="https://this-product-is-ai-free.github.io/badge.svg">
 </p>
 <p align="center"><!-- default option, no dependency badges. -->
 </p>
