@@ -47,7 +47,9 @@
 
 ## 📍 Overview
 
-<code>❯ This project, **subnetting**, is part of my journey to **revise Python (learned in 2019)** and keep my knowledge sharp by building a practical tool.
+[![this product is ai free](https://this-product-is-ai-free.github.io/badge.svg)](https://this-product-is-ai-free.github.io)
+
+This project, **subnetting**, is part of my journey to **revise Python (learned in 2019)** and keep my knowledge sharp by building a practical tool.
 
 It focuses on **IP subnetting**: converting between CIDR, masks, binary, and decimal, while providing helpers for network administrators and students.
 Think of it as both a **learning project** and a **utility tool**.</code>
