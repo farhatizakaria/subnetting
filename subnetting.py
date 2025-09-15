@@ -1,4 +1,5 @@
 from converting import *
+from math import ceil
 
 
 class Network:
@@ -35,16 +36,44 @@ class Network:
             else:
                 subnet_mask += str(toDecimal(mask[i]))
         # The result is string
-        print(subnet_mask)
+        return subnet_mask
 
     def getNetworkIP(self):
         # We need subnet mask and ip then calculate the result of AND operation
         subnet = self.getSubnet()
         ip = self.ip
-        # Convert these to lists
-        ip_list = ip.split(".")
-        #subnet_list = subnet.split(".")
+        # Convert ip and subnet mask to list of bytes
+        ip_list = ip.split('.')
+        mask_list = subnet.split('.')
+
+
+        # Convert those lists to binary for AND operation
+        ip_binary = []
+        mask_binary = []
+        for binary in ip_list:
+            ip_binary.append(toBinary(int(binary)))
+        for binary in mask_list:
+            mask_binary.append(toBinary(int(binary)))
+
+
+        # Now we need to perform the AND operation (complicated at my 1st attempt tbh)
+        NetworkIP = ['','','','']
+
+        for byte in range(4):
+            for bit in range(8):
+                NetworkIP[byte] += str(int(ip_binary[byte][bit]) and int(mask_binary[byte][bit]))
+
+        NetworkAddress = []
+        for byte in NetworkIP:
+            NetworkAddress.append(str(toDecimal(byte)))
+
+        # Convert to string
+        Network = ".".join(NetworkAddress)
+        return Network
+
 
 
 host1 = Network('192.168.1.1', 24)
-host1.getSubnet()
+sub = host1.getSubnet()
+netID = host1.getNetworkIP()
+print(netID,sub)
